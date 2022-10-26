@@ -37,7 +37,7 @@ local Window = Rayfield:CreateWindow({
 Name = "      ",
 LoadingTitle = "Universal tools",
 LoadingSubtitle = "by Exo",
-KeySystem = true, -- Set this to true to use our key system
+KeySystem = false, -- Set this to true to use our key system
 KeySettings = {
 	Title = "Universal Tools",
 	Subtitle = "Key System",
@@ -220,29 +220,20 @@ local Input = Funny:CreateInput({
 	end,
 })
 
-local ACSExploit = Games:CreateToggle({
-	Name = "ACSExploit",
-	CurrentValue = false,
-	Callback = function(Value)
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/acs%20gun%20mod%20no%20syn%20x%20compatability.lua"))()
-
-	end,
-})
 
 
-local FrenchSCP = Games:CreateToggle({
-	Name = "FrenchSCP Exploit GUI",
-	CurrentValue = false,
-	Callback = function(Value)
+local FrenchSCP = Games:CreateButton({
+	Name = "Button Example",
+	Callback = function()
 		loadstring(game:HttpGet('https://raw.githubusercontent.com/Exomeme/Hub/main/French.lua'))()
-
 	end,
 })
 
-
-
-
-
+local ACSExploit = Games:CreateButton({
+	Name = "ACSExploit",
+	Callback = function()
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/fheahdythdr/legendary-train/main/acs%20gun%20mod%20no%20syn%20x%20compatability.lua"))()	end,
+})
 
 
 
